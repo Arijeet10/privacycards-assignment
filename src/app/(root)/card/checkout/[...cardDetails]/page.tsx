@@ -28,7 +28,7 @@ const Checkout = () => {
 
   return (
     <>
-      <div className="py-8">
+      <div className="py-8 relative">
         <div className="px-2 sm:px-10 lg:px-20 py-10 relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
           <div className="absolute top-0 right-0 ">
             <Image
@@ -119,7 +119,7 @@ const Checkout = () => {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div onClick={()=>{}} className={`w-[40vw] rounded-md ${cardDetails[0] == "basic" && "bg-[#FFFFFF]"}`}>
+            <div onClick={()=>handleCheckout()} className={`w-[40vw] rounded-md ${cardDetails[0] == "basic" && "bg-[#FFFFFF]"}`}>
               <Button
                 buttonName="Pay Now"
                 styles={`w-full button-shadow font-semibold ${
@@ -135,8 +135,29 @@ const Checkout = () => {
         {/* Dummy Checkout Success PopUp */}
         {checkoutStatus && (
           <div className="">
+            <div onClick={()=>setCheckoutStatus(false)} className="absolute z-10 inset-0 backdrop-blur-sm bg-[rgba(255,255,255,0.5)]" />
+          <div className="absolute w-full sm:w-[50vw] md:w-[40vw] lg:w-[30vw] h-[50vh] z-50 top-2/4 left-2/4 translate-x-[-50%] translate-y-[-50%] bg-[#FFFFFF] rounded-[24px] success-popup flex items-center justify-center">
+            <div className="flex flex-col items-center gap-4">
+              <div className="flex items-center justify-center">
+              <div className="p-4 bg-[#D1FADF] rounded-full">
+                <Image
+                  src="/success.svg"
+                  alt=""
+                  width={100}
+                  height={100}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              </div>
 
+              <div className="flex flex-col items-center gap-2">
+                <div className="text-[#191919]">Successfully paid</div>
+                <div className="text-[#00000080]">Your Card on is on the way</div>
+              </div>
+            </div>
           </div>
+          </div>
+
         )}
       </div>
     </>

@@ -33,6 +33,11 @@
     box-shadow: 0px 4px 10px 0px #E7E7FB;
 }
 
+.success-popup{
+    box-shadow: 12px 12px 36px 6px #0202461F;
+
+}
+
 .privacy-card{
     box-shadow: 0px 5.88px 108.79px 0px #EAEAFF;
 }
