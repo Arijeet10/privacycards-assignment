@@ -151,7 +151,7 @@ const Checkout = () => {
               </div>
 
               <div className="flex flex-col items-center gap-2">
-                <div className="text-[#191919]">Successfully paid</div>
+                <div className="text-[#191919] font-medium">Successfully paid</div>
                 <div className="text-[#00000080]">Your Card on is on the way</div>
               </div>
             </div>

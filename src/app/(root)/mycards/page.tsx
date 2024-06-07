@@ -36,9 +36,9 @@ const MyCards = () => {
                   <div key={i} className="relative rounded-lg">
                     <MyCard cardType={item.cardType} cardStatus={item.cardStatus} />
                     {item.cardStatus!=='active' && item.cardStatus!=='notActive' && (
-                      <div className="absolute z-50 inset-0 rounded-lg">
+                      <div className="absolute z-40 inset-0 rounded-lg">
                         <div className="rounded-lg absolute z-10 inset-0 backdrop-blur-sm bg-[rgba(255,255,255,0.5)]" />
-                        <div className={`absolute z-50 top-1/4 left-2/4 translate-x-[-50%] translate-y-[-50%] ${item.cardType!=="basic"?"text-[#FFFFFF]":"text-[#6D6D6D]"}  font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-nowrap`}>{item.cardStatus}</div>
+                        <div className={`absolute z-40 top-1/4 left-2/4 translate-x-[-50%] translate-y-[-50%] ${item.cardType!=="basic"?"text-[#FFFFFF]":"text-[#6D6D6D]"}  font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-nowrap`}>{item.cardStatus}</div>
                       </div>
                     )}
                   </div>
