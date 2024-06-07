@@ -83,6 +83,14 @@ const Sidebar = ({ closeSidebar }: { closeSidebar: () => void }) => {
               <div>Spent</div>
             </Link>
           </div>
+          <div className=" sm:hidden w-full flex items-center justify-center">
+            <Link
+              href="/login"
+              className="px-4 py-2 w-[30vw] rounded-lg violet-bg-gradient font-semibold text-[#ffffff] text-center"
+            >
+              Login
+            </Link>
+          </div>
         </div>
       </nav>
     </>
