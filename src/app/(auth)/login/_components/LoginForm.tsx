@@ -2,12 +2,18 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
+
+import { FaRegEyeSlash } from "react-icons/fa";
+import { FaRegEye } from "react-icons/fa";
 
 
 const LoginForm=()=>{
 
   const router=useRouter()
+
+  const [passwordInputType,setPasswordInputType]=useState("password")
 
     return(
         <>
@@ -36,12 +42,17 @@ const LoginForm=()=>{
               <div className="text-sm sm:text-xs md:text-sm">
                 Password<span className="text-[#F04438]">*</span>
               </div>
-              <div className="p-2 rounded-lg border border-[#D0D5DD]">
+              <div className="p-2 rounded-lg border border-[#D0D5DD] flex items-center justify-between">
                 <input
-                  type="text"
+                  type={passwordInputType}
                   placeholder="Enter password"
                   className="w-full focus:outline-none bg-transparent  text-[#667085]"
                 />
+                {passwordInputType=="password"?(
+                  <FaRegEye onClick={()=>setPasswordInputType("text")} className="" />
+                ):(
+                  <FaRegEyeSlash onClick={()=>setPasswordInputType("password")} className="" />
+                )}
               </div>
             </div>
           </div>

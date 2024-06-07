@@ -1,7 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 const SignupForm = () => {
+  const [passwordInputType, setPasswordInputType] = useState("password");
+
   return (
     <>
       <div className="flex flex-col gap-4 text-base sm:text-xs md:text-sm lg:text-base">
@@ -45,12 +51,23 @@ const SignupForm = () => {
               <div className="text-sm sm:text-xs md:text-sm">
                 Password<span className="text-[#F04438]">*</span>
               </div>
-              <div className="p-2 rounded-lg border border-[#D0D5DD]">
+              <div className="p-2 rounded-lg border border-[#D0D5DD] flex items-center justify-between">
                 <input
-                  type="text"
+                  type={passwordInputType}
                   placeholder="Enter password"
                   className="w-full focus:outline-none bg-transparent text-[#667085]"
                 />
+                {passwordInputType == "password" ? (
+                  <FaRegEye
+                    onClick={() => setPasswordInputType("text")}
+                    className=""
+                  />
+                ) : (
+                  <FaRegEyeSlash
+                    onClick={() => setPasswordInputType("password")}
+                    className=""
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -61,7 +78,9 @@ const SignupForm = () => {
               </div>
               <div>Remember for 30 days</div>
             </div>
-            <div className="violet-text-gradient font-semibold ">Forgot password</div>
+            <div className="violet-text-gradient font-semibold ">
+              Forgot password
+            </div>
           </div>
           <div className="flex flex-col gap-4 text-lg sm:text-sm  md:text-base lg:text-lg">
             <div className="w-full">
