@@ -15,7 +15,7 @@ const Purchase = () => {
   return (
     <>
       <div className="py-8">
-        <div className="px-20 py-10 relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
+        <div className="px-2 sm:px-20 py-10 relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
           <div className="absolute top-0 right-0 ">
             <Image
               src="/Triangle.png"
@@ -42,7 +42,7 @@ const Purchase = () => {
                 );
               })}
             </div>
-            <div className="px-4 flex flex-col gap-4 font-medium text-sm sm:text-base md:text-lg lg:text-2xl">
+            <div className="px-4 flex flex-col gap-4 font-medium text-xs sm:text-base md:text-lg lg:text-2xl">
               {purchases.map((item, i) => {
                 return (
                   <div key={i} className="py-4 border-b border-[#E5E5E5] flex items-center justify-between text-nowrap">

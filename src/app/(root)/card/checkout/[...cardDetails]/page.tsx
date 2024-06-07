@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import CheckoutPrivacyCard from "../_components/CheckoutPrivacyCard";
 import Button from "@/components/ui/Button";
+import { useState } from "react";
 
 const Checkout = () => {
   const { cardDetails } = useParams();
@@ -19,10 +20,16 @@ const Checkout = () => {
 
   const tokenInfo = tokens.filter((item) => item.name == cardDetails[2]);
 
+  const [checkoutStatus,setCheckoutStatus]=useState(false);
+
+  const handleCheckout=()=>{
+    setCheckoutStatus(true)
+  }
+
   return (
     <>
       <div className="py-8">
-        <div className="px-20 py-10 relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
+        <div className="px-2 sm:px-20 py-10 relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
           <div className="absolute top-0 right-0 ">
             <Image
               src="/Triangle.png"
@@ -47,7 +54,7 @@ const Checkout = () => {
           </div>
           <div className="flex items-center justify-center gap-8 text-[#2A2A2A99]">
             <div className="flex items-center gap-2">
-              <div className="text-2xl font-medium">Selected Network:</div>
+              <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium">Selected Network:</div>
               <div>
                 <div
                   className={`p-4 border border-[#898989] rounded-lg flex items-center justify-center gap-2 cursor-pointer  `}
@@ -74,7 +81,7 @@ const Checkout = () => {
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <div className="text-2xl font-medium">Selected Token:</div>
+              <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium">Selected Token:</div>
               <div>
                 <div
                   className={`p-4 border ${
@@ -124,6 +131,13 @@ const Checkout = () => {
             </div>
           </div>
         </div>
+
+        {/* Dummy Checkout Success PopUp */}
+        {checkoutStatus && (
+          <div className="">
+
+          </div>
+        )}
       </div>
     </>
   );

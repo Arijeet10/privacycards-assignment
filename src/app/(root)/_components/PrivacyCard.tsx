@@ -8,7 +8,7 @@ const PrivacyCard=({card}:{card:CardDetailTypes})=>{
 
     return(
         <>
-            <div className={`p-8 w-full sm:min-w-[500px] h-[300px] rounded-[15px]   privacy-card ${card.cardType==="basic"&&"bg-[#ffffff] text-[#696974]"} ${card.cardType==="standard"&&"violet-bg-gradient text-[#ffffff]"} ${card.cardType==="gold"&&"slate-bg-gradient text-[#ffffff]"}`}>
+            <div className={`px-8 py-8 w-full sm:min-w-[500px] h-[300px] rounded-[15px]   privacy-card ${card.cardType==="basic"&&"bg-[#ffffff] text-[#696974]"} ${card.cardType==="standard"&&"violet-bg-gradient text-[#ffffff]"} ${card.cardType==="gold"&&"slate-bg-gradient text-[#ffffff]"}`}>
                 <div className="w-full h-full flex flex-col justify-between">
                     <div className="flex items-center justify-between">
                         <div className="font-bold text-lg sm:text-3xl">Privacy Cards.</div>

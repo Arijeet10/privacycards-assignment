@@ -14,10 +14,10 @@ const Sidebar=({closeSidebar}:{closeSidebar:()=>void})=>{
                     <IoClose onClick={closeSidebar} className="p-2 w-10 h-10 text-[#3333DC] rounded-full hover:bg-[#f1f1f1]" />
                 </div>
                 <div className="flex flex-col gap-4">
-                    <Link href='/'>Cards</Link>
-                    <Link href='/mycards'>My Cards</Link>
-                    <Link href='/purchase'>Purchase</Link>
-                    <Link href='/spent'>Spent</Link>
+                    <Link onClick={closeSidebar} href='/'>Cards</Link>
+                    <Link onClick={closeSidebar} href='/mycards'>My Cards</Link>
+                    <Link onClick={closeSidebar} href='/purchase'>Purchase</Link>
+                    <Link onClick={closeSidebar} href='/spent'>Spent</Link>
                 </div>
             </nav>
         </>
