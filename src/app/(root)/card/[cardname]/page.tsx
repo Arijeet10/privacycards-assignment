@@ -52,7 +52,7 @@ const SelectedCard: NextPage<SelectedCardProps> = ({ params }) => {
         <div className="px-20 py-10 w-full relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
           <div className="absolute top-0 right-0 ">
             <Image
-              src="/triangle.png"
+              src="/Triangle.png"
               alt=""
               width={100}
               height={100}
