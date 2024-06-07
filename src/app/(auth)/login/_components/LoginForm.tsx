@@ -45,7 +45,7 @@ const LoginForm=()=>{
               </div>
             </div>
           </div>
-          <div className="flex items-end justify-between gap-2 text-sm">
+          <div className="flex sm:items-end justify-between gap-2 text-sm">
             <div className="flex items-start gap-2">
                 <div>
                     <input 
