@@ -12,9 +12,9 @@ const MyCard=({cardType,cardStatus}:{cardType:string,cardStatus:string})=>{
 
     return(
         <>
-          <div className="p-4  rounded-lg bg-[#FFFFFF]">
+          <div className="p-4 w-full  rounded-lg bg-[#FFFFFF]">
             <div className="flex flex-col items-center gap-4">
-                <div className="w-full border border-[#EBEBEB] rounded-[15px]">
+                <div className="w-full  border border-[#EBEBEB] rounded-[15px]">
                     <PrivacyCard card={cardData[0]} />
                 </div>
                 <div className="w-full px-8">

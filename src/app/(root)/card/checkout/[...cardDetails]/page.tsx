@@ -29,7 +29,7 @@ const Checkout = () => {
   return (
     <>
       <div className="py-8">
-        <div className="px-2 sm:px-20 py-10 relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
+        <div className="px-2 sm:px-10 lg:px-20 py-10 relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
           <div className="absolute top-0 right-0 ">
             <Image
               src="/Triangle.png"
@@ -52,7 +52,7 @@ const Checkout = () => {
               cardInfo={cardInfo}
             />
           </div>
-          <div className="flex items-center justify-center gap-8 text-[#2A2A2A99]">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-[#2A2A2A99]">
             <div className="flex items-center gap-2">
               <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium">Selected Network:</div>
               <div>

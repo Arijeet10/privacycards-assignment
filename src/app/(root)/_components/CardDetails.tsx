@@ -22,7 +22,7 @@ const CardDetails = ({ card }: { card: CardDetailTypes }) => {
   return (
     <>
       <div className="flex flex-col gap-8">
-        <div className="flex flex-col lg:flex-row  lg:items-center justify-between gap-4 ">
+        <div className="flex flex-col md:flex-row  lg:items-center justify-between gap-4 ">
           <div
             className={`flex flex-col lg:flex-row gap-6 items-start ${
               card.cardType == "standard" && "lg:order-2"
@@ -49,7 +49,7 @@ const CardDetails = ({ card }: { card: CardDetailTypes }) => {
               </div>
             </div>
             <div
-              className={`ml-32 lg:ml-0 lg:pt-0 lg:mt-8 border-b lg:border-r w-60 h-0 lg:w-0 lg:h-60 border-[#E0E0E0] ${
+              className={`sm:ml-32 lg:ml-0 lg:pt-0 lg:mt-8 border-b lg:border-r w-full sm:w-60 h-0 lg:w-0 lg:h-60 border-[#E0E0E0] ${
                 card.cardType == "standard" && "lg:order-1"
               }`}
             />

@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <div className="py-8">
         <div className="flex flex-col gap-10">
-          <div className="px-2 sm:px-20 py-10 relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
+          <div className="px-2 sm:px-10 lg:px-20 py-10 relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
             <div className="absolute top-0 right-0 ">
               <Image
                 src="/Triangle.png"

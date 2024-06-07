@@ -49,7 +49,7 @@ const SelectedCard: NextPage<SelectedCardProps> = ({ params }) => {
   return (
     <>
       <div className="py-8">
-        <div className="px-2 sm:px-20 py-10 w-full relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
+        <div className="px-2 sm:px-10 lg:px-20 py-10 w-full relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
           <div className="absolute top-0 right-0 ">
             <Image
               src="/Triangle.png"
@@ -68,7 +68,7 @@ const SelectedCard: NextPage<SelectedCardProps> = ({ params }) => {
           </div>
           <div className="flex items-center justify-center">
             <div className="flex flex-col gap-2">
-              <div className="sm:w-[45vw]">
+              <div className="md:w-[45vw]">
                 <PrivacyCard card={cardDetails[0]} />
               </div>
               <div

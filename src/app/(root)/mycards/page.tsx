@@ -13,7 +13,7 @@ const MyCards = () => {
   return (
     <>
       <div className="py-8">
-        <div className="px-2 sm:px-20 py-10 relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
+        <div className="px-2 sm:px-4 lg:px-10 py-10 relative bg-[#F5F3FE] rounded-[20px] flex flex-col gap-10">
           <div className="absolute top-0 right-0 ">
             <Image
               src="/Triangle.png"
@@ -30,7 +30,7 @@ const MyCards = () => {
             </div>
             <Divider />
           </div>
-          <div className="grid lg:grid-cols-2 gap-10">
+          <div className="grid md:grid-cols-2 gap-4 lg:gap-10">
             {myCards.map((item,i)=>{
                 return(
                   <div key={i} className="relative rounded-lg">
